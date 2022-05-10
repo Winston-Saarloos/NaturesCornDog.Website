@@ -3,7 +3,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+import { useAuth } from '../context/AuthContext';
+import { useRouter } from 'next/router';
+import Button from '@mui/material/Button';
+
 const Home: NextPage = () => {
+  const { user, logout } = useAuth();
+  const router = useRouter();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -50,6 +57,23 @@ const Home: NextPage = () => {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
+          {user ? (
+              <div>
+                <Button
+                  onClick={() => {
+                    logout()
+                    router.push('/login')
+                  }}
+                >
+                  Logout
+                </Button>
+              </div>
+            ) : (
+              <>
+                  <Button href="/signup">Signup</Button>
+                  <Button href="/login">Login</Button>
+              </>
+            )}
         </div>
       </main>
 
