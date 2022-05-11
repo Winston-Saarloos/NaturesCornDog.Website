@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #271c5c;
+}
+
+.container {
+    padding: 20px 30px;
+}
+
+.elementContainer {
+    margin-bottom: 20px;
+}
+
+.textField {
+    width: 100%;
+}
