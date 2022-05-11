@@ -67,7 +67,7 @@ const Login = () => {
             />
           </div>
           <div className={styles.elementContainer}>
-              Don't have an account already? Sign Up
+              Don&apos;t have an account already? Sign Up
           </div>
           <div>
             <Button variant="outlined" onClick={() => handleLogin()}>
