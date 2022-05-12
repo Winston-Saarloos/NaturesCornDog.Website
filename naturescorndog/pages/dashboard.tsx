@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Header from '../components/Header';
 
 const Dashboard = () => {
-  return <div>This route is protected</div>
-}
+  return (
+    <>
+      <Header />
+      <div>This route is protected</div>
+    </>
+  );
+};
 
 export default Dashboard;
