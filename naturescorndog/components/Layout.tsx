@@ -1,7 +1,8 @@
 import * as React from "react";
 import Head from "next/head";
-import styles from "../styles/Layout.module.css";
 import Header from "../components/Header";
+
+import Paper from "@mui/material/Paper";
 
 interface Local {
   children?: React.ReactNode;
@@ -11,7 +12,7 @@ type Props = Local;
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className={styles.container}>
+    <Paper sx={{ height: "100vh" }}>
       <Head>
         <title>Nature&rsquo;s Corndog</title>
         <meta
@@ -22,7 +23,7 @@ const Layout = ({ children }: Props) => {
       </Head>
       <Header />
       <>{children}</>
-    </div>
+    </Paper>
   );
 };
 
